@@ -7,7 +7,6 @@ public class TopDownApproach {
             for (int j = 0; j < capacity + 1; j++) {
                 if(i == 0 || j == 0){
                     table[i][j] = 0;
-                    System.out.println("update");
                 }
             }
         }
