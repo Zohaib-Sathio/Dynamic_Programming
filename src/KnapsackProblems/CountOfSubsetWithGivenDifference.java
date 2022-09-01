@@ -36,10 +36,10 @@ public class CountOfSubsetWithGivenDifference {
 
 
     public static void main(String[] args) {
-        int[] arr = { 1,1,2,3};
+        int[] arr = { 1,1,1,1};
 //        int[] arr = { 2, 4, 5, 1, 5};
 //        int[] arr = { 9, 2, 7, 9};
-        int difference = 1;
+        int difference = 2;
         System.out.println(CountOfSubsetsWithGivenDifference(arr, difference));
     }
 }
