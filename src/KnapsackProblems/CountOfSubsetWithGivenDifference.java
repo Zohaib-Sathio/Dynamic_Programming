@@ -1,8 +1,6 @@
 package KnapsackProblems;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class CountOfSubsetWithGivenDifference {
     public static int CountOfSubsetsWithGivenDifference(int[] arr, int difference){
