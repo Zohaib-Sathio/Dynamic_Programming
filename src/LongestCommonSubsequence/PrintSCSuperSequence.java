@@ -22,7 +22,7 @@ public class PrintSCSuperSequence {
 
         StringBuilder LCS = new StringBuilder();
         int i = m, j = n;
-        while (i > 0 || j > 0){
+        while (i > 0 && j > 0){
             if(a.charAt(i-1) == b.charAt(j-1)){
                 LCS.append(a.charAt(i-1));
                 i--; j--;
@@ -33,11 +33,20 @@ public class PrintSCSuperSequence {
                     i--;
                 }
                 else {
-                    LCS.append(b.charAt(i-1));
+                    LCS.append(b.charAt(j-1));
                     j--;
                 }
             }
         }
+        while (i > 0){
+            LCS.append(a.charAt(i-1));
+            i--;
+        }
+        while (j > 0){
+            LCS.append(b.charAt(j-1));
+            j--;
+        }
+
         String returnLCS = "";
         for (int k = LCS.length()-1; k > -1; k--) {
             returnLCS += LCS.charAt(k);
@@ -50,7 +59,7 @@ public class PrintSCSuperSequence {
     public static void main(String[] args) {
         String a = "Zohaib";
         String b = "Zubair";
-        //Output -> Zohbbaibr
+        //Output -> Zohubaibr
         //Output string contains both strings as subsequences
         System.out.println(printSuperSequence(a, b, a.length(), b.length()));
     }
