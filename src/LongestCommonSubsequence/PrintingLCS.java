@@ -22,7 +22,7 @@ public class PrintingLCS {
         }
         StringBuilder LCS = new StringBuilder();
         int i = m, j = n;
-        while (i > 0 || j > 0){
+        while (i > 0 && j > 0){
             if(a.charAt(i-1) == b.charAt(j-1)){
                 LCS.append(a.charAt(i-1));
                 i--; j--;
