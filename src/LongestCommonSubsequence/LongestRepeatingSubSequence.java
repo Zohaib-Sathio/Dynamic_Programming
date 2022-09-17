@@ -24,7 +24,8 @@ public class LongestRepeatingSubSequence {
         return table[m][n];
     }
     public static void main(String[] args) {
-        String a = "AACEBCDD";
+//        String a = "AACEBCDD";
+        String a = "abffsssdf";
         System.out.println(longestRepeatingSS(a, a, a.length(), a.length()));
     }
 }
