@@ -15,6 +15,7 @@ public class PalindromePartitioningMemoization {
         }
         int minCuts = Integer.MAX_VALUE;
         for (int k = i; k < j; k++) {
+            //Checking here for both to avoid unnecessary function call
             int left = (table[i][k] != 0) ? table[i][k] : cutPalindrome(s, i , k);
             int right = (table[k+1][j] != 0) ? table[k+1][j] : cutPalindrome(s, k+1 , j);
             int temp = left + right + 1;
