@@ -15,6 +15,7 @@ public class TopDownApproach {
         for (int i = 1; i < n + 1; i++) {
             for (int j = 1; j < capacity + 1; j++) {
                 if(weight[i - 1] <= j){
+                    // In 01 Bounded knapsack, if we have included a number that can not be included again!
                     table[i][j] = Math.max(value[i - 1] + table[i - 1][j - weight[i - 1]], table[i - 1][j]);
                 }
                 else {
